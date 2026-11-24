@@ -1,0 +1,129 @@
+
+{% extends 'dashboard/admin_base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Pengumuman</h1>
+        <p>Kelola informasi dan pengumuman untuk mahasiswa SiRekap.</p>
+    </div>
+</div>
+
+<!-- RINGKASAN PENGUMUMAN -->
+<div class="admin-stats-grid">
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Total Pengumuman</p>
+            <h2>12</h2>
+            <span>Seluruh pengumuman</span>
+        </div>
+        <div class="stat-icon blue">📢</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Pengumuman Aktif</p>
+            <h2>8</h2>
+            <span>Sedang ditampilkan</span>
+        </div>
+        <div class="stat-icon green">✓</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Pengumuman Draft</p>
+            <h2>4</h2>
+            <span>Belum dipublikasikan</span>
+        </div>
+        <div class="stat-icon orange">📝</div>
+    </div>
+
+</div>
+
+<!-- DAFTAR PENGUMUMAN -->
+<div class="content-card">
+
+    <div class="section-header">
+        <div>
+            <h2>Daftar Pengumuman</h2>
+            <p>Informasi yang telah dibuat oleh administrator.</p>
+        </div>
+    </div>
+
+    <div class="announcement-admin-list">
+
+        <div class="announcement-admin-item">
+            <div class="announcement-admin-icon blue">📢</div>
+
+            <div class="announcement-admin-info">
+                <h3>Nilai Kuis 1 DDP 1 Telah Tersedia</h3>
+                <p>
+                    Mahasiswa dapat melihat hasil nilai Kuis 1
+                    melalui halaman dashboard SiRekap.
+                </p>
+                <span>20 November 2026</span>
+            </div>
+
+            <div class="announcement-admin-status">
+                <span class="status-badge success">Dipublikasikan</span>
+            </div>
+        </div>
+
+        <div class="announcement-admin-item">
+            <div class="announcement-admin-icon orange">📅</div>
+
+            <div class="announcement-admin-info">
+                <h3>Informasi Jadwal Kuis 3</h3>
+                <p>
+                    Kuis 3 mata kuliah DDP 1 akan dilaksanakan
+                    pada tanggal 25 November 2026.
+                </p>
+                <span>22 November 2026</span>
+            </div>
+
+            <div class="announcement-admin-status">
+                <span class="status-badge success">Dipublikasikan</span>
+            </div>
+        </div>
+
+        <div class="announcement-admin-item">
+            <div class="announcement-admin-icon green">📚</div>
+
+            <div class="announcement-admin-info">
+                <h3>Pembaruan Data Nilai</h3>
+                <p>
+                    Terdapat pembaruan data nilai mahasiswa
+                    pada beberapa mata kuliah.
+                </p>
+                <span>23 November 2026</span>
+            </div>
+
+            <div class="announcement-admin-status">
+                <span class="status-badge pending">Draft</span>
+            </div>
+        </div>
+
+        <div class="announcement-admin-item">
+            <div class="announcement-admin-icon blue">ℹ️</div>
+
+            <div class="announcement-admin-info">
+                <h3>Pemeliharaan Sistem SiRekap</h3>
+                <p>
+                    Sistem SiRekap akan menjalani pemeliharaan
+                    untuk meningkatkan kualitas layanan.
+                </p>
+                <span>24 November 2026</span>
+            </div>
+
+            <div class="announcement-admin-status">
+                <span class="status-badge pending">Draft</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

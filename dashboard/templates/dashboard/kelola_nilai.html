@@ -1,0 +1,146 @@
+
+{% extends 'dashboard/admin_base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Kelola Nilai</h1>
+        <p>Pantau dan kelola hasil nilai kuis mahasiswa.</p>
+    </div>
+</div>
+
+<!-- RINGKASAN NILAI -->
+<div class="admin-stats-grid">
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Total Data Nilai</p>
+            <h2>120</h2>
+            <span>Seluruh nilai mahasiswa</span>
+        </div>
+        <div class="stat-icon blue">📊</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Sudah Diinput</p>
+            <h2>100</h2>
+            <span>Nilai tersedia</span>
+        </div>
+        <div class="stat-icon green">✓</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Belum Diinput</p>
+            <h2>20</h2>
+            <span>Menunggu penginputan</span>
+        </div>
+        <div class="stat-icon orange">⏳</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Rata-rata Nilai</p>
+            <h2>82.5</h2>
+            <span>Seluruh data nilai</span>
+        </div>
+        <div class="stat-icon red">★</div>
+    </div>
+
+</div>
+
+<!-- TABEL NILAI -->
+<div class="content-card">
+
+    <div class="section-header">
+        <div>
+            <h2>Daftar Nilai Mahasiswa</h2>
+            <p>Rekap hasil kuis mahasiswa yang telah tercatat.</p>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="grade-table">
+
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>NPM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Mata Kuliah</th>
+                    <th>Nama Kuis</th>
+                    <th>Nilai</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>240601</td>
+                    <td>Mahasiswa A</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 1</td>
+                    <td><span class="grade-score">90</span></td>
+                    <td><span class="status-badge success">Sudah Diinput</span></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>240602</td>
+                    <td>Mahasiswa B</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 1</td>
+                    <td><span class="grade-score">85</span></td>
+                    <td><span class="status-badge success">Sudah Diinput</span></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>240603</td>
+                    <td>Mahasiswa C</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 1</td>
+                    <td><span class="grade-score">78</span></td>
+                    <td><span class="status-badge success">Sudah Diinput</span></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>240604</td>
+                    <td>Mahasiswa D</td>
+                    <td>Matematika</td>
+                    <td>Kuis 2</td>
+                    <td>-</td>
+                    <td><span class="status-badge pending">Belum Diinput</span></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>240605</td>
+                    <td>Mahasiswa E</td>
+                    <td>Matematika</td>
+                    <td>Kuis 2</td>
+                    <td>-</td>
+                    <td><span class="status-badge pending">Belum Diinput</span></td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>240606</td>
+                    <td>Mahasiswa F</td>
+                    <td>Statistika</td>
+                    <td>Kuis 1</td>
+                    <td><span class="grade-score">95</span></td>
+                    <td><span class="status-badge success">Sudah Diinput</span></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

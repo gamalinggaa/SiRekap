@@ -1,0 +1,106 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiRekap Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <div class="admin-logo-icon">S</div>
+            <div>
+                <h2>SiRekap</h2>
+                <span>ADMIN PANEL</span>
+            </div>
+        </div>
+
+        <div class="admin-menu-label">MENU UTAMA</div>
+
+        <nav class="admin-nav">
+
+            <a href="{% url 'admin_dashboard' %}"
+               class="admin-menu-item {% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="{% url 'data_mahasiswa' %}"
+                class="admin-menu-item {% if request.resolver_match.url_name == 'data_mahasiswa' %}active{% endif %}">
+                <span>♙</span>
+                Data Mahasiswa
+            </a>
+
+            <a href="{% url 'data_kuis' %}"
+                class="admin-menu-item {% if request.resolver_match.url_name == 'data_kuis' %}active{% endif %}">
+                <span>📝</span>
+                Data Kuis
+            </a>
+
+            <a href="{% url 'kelola_nilai' %}"
+            class="admin-menu-item {% if request.resolver_match.url_name == 'kelola_nilai' %}active{% endif %}">
+                <span>📊</span>
+                Kelola Nilai
+            </a>
+
+            
+            <a href="{% url 'admin_pengumuman' %}"
+            class="admin-menu-item {% if request.resolver_match.url_name == 'admin_pengumuman' %}active{% endif %}">
+                <span>📢</span>
+                Pengumuman
+            </a>
+
+        </nav>
+
+        <div class="admin-sidebar-bottom">
+            <div class="admin-profile">
+                <div class="admin-avatar">A</div>
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Admin SiRekap</span>
+                </div>
+            </div>
+
+            <a href="#" class="admin-logout">
+                <span>↪</span> Keluar
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="admin-main">
+
+        <header class="admin-topbar">
+            <div>
+                <h3>Panel Administrator</h3>
+                <p>Kelola sistem SiRekap dengan mudah.</p>
+            </div>
+
+            <div class="admin-topbar-right">
+                <span class="admin-status-dot"></span>
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <main class="admin-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

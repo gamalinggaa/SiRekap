@@ -1,0 +1,115 @@
+
+{% extends 'dashboard/admin_base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Data Mahasiswa</h1>
+        <p>Lihat dan pantau data mahasiswa yang terdaftar di SiRekap.</p>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="admin-stats-grid">
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon blue">👨‍🎓</div>
+        <p>Total Mahasiswa</p>
+        <h2>120</h2>
+        <span>Mahasiswa terdaftar</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon red">✓</div>
+        <p>Akun Aktif</p>
+        <h2>115</h2>
+        <span>Akun mahasiswa aktif</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon blue">⏳</div>
+        <p>Akun Nonaktif</p>
+        <h2>5</h2>
+        <span>Akun tidak aktif</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon red">📚</div>
+        <p>Program Studi</p>
+        <h2>3</h2>
+        <span>Program studi terdaftar</span>
+    </div>
+
+</div>
+
+<!-- STUDENT TABLE -->
+<div class="content-card">
+
+    <div class="section-header">
+        <div>
+            <h2>Daftar Mahasiswa</h2>
+            <p>Data mahasiswa yang terdaftar dalam sistem.</p>
+        </div>
+        <span class="total-label">120 Mahasiswa</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="grade-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>NPM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Program Studi</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>240601</td>
+                    <td>Mahasiswa A</td>
+                    <td>Ilmu Komputer</td>
+                    <td><span class="status-badge success">Aktif</span></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>240602</td>
+                    <td>Mahasiswa B</td>
+                    <td>Ilmu Komputer</td>
+                    <td><span class="status-badge success">Aktif</span></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>240603</td>
+                    <td>Mahasiswa C</td>
+                    <td>Sistem Informasi</td>
+                    <td><span class="status-badge success">Aktif</span></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>240604</td>
+                    <td>Mahasiswa D</td>
+                    <td>Ilmu Komputer</td>
+                    <td><span class="status-badge">Nonaktif</span></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>240605</td>
+                    <td>Mahasiswa E</td>
+                    <td>Manajemen Informatika</td>
+                    <td><span class="status-badge success">Aktif</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

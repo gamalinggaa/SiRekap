@@ -1,0 +1,57 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SiRekap{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>▥ SiRekap</h2>
+                <p>Update nilai kuis, lebih mudah!</p>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="{% url 'dashboard' %}" class="menu-item {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">⌂ Beranda</a>
+                <a href="{% url 'riwayat_nilai' %}" class="menu-item {% if request.resolver_match.url_name == 'riwayat_nilai' %}active{% endif %}">▤ Riwayat Nilai</a>
+                <a href="{% url 'statistik' %}" class="menu-item {% if request.resolver_match.url_name == 'statistik' %}active{% endif %}">▥ Statistik</a>
+                <a href="{% url 'pengumuman' %}" class="menu-item {% if request.resolver_match.url_name == 'pengumuman' %}active{% endif %}">♧ Pengumuman</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#">⚙ Pengaturan</a>
+                <a href="#">↪ Keluar</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div></div>
+                <div class="user-info">
+                    <span>Mahasiswa</span>
+                    <div class="user-avatar">M</div>
+                </div>
+            </header>
+
+            <section class="page-content">
+                {% block content %}
+                {% endblock %}
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

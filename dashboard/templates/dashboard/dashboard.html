@@ -1,0 +1,178 @@
+
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Beranda | SiRekap{% endblock %}
+
+{% block content %}
+
+<!-- WELCOME BANNER -->
+<section class="welcome-banner">
+    <div>
+        <h1>Halo, Mahasiswa! 👋</h1>
+        <p>Selamat datang di SiRekap. Yuk, pantau perkembangan nilaimu!</p>
+    </div>
+    <div class="welcome-icon">📚</div>
+</section>
+
+<!-- SUMMARY CARDS -->
+<section class="summary-container">
+
+    <div class="summary-card">
+        <div class="summary-icon green">✓</div>
+        <div>
+            <p>Total Kuis</p>
+            <h2>12</h2>
+            <small>Kuis yang telah dinilai</small>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon yellow">★</div>
+        <div>
+            <p>Rata-rata Nilai</p>
+            <h2>87.5</h2>
+            <small>Rata-rata seluruh kuis</small>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon orange">🏆</div>
+        <div>
+            <p>Nilai Tertinggi</p>
+            <h2>100</h2>
+            <small>Nilai terbaikmu</small>
+        </div>
+    </div>
+
+</section>
+
+<!-- DASHBOARD CONTENT -->
+<section class="dashboard-grid">
+
+    <!-- RECENT GRADES -->
+    <div class="content-card recent-grades">
+
+        <div class="section-heading">
+            <h2>⚡ Update Terbaru</h2>
+            <a href="{% url 'riwayat_nilai' %}">Lihat Semua →</a>
+        </div>
+
+        <div class="grade-item">
+            <div class="subject-icon purple">Σ</div>
+            <div class="grade-info">
+                <h4>Matematika Ekonomi</h4>
+                <p>Kuis 5: Distribusi Normal</p>
+            </div>
+            <div class="grade-date">24 Nov 2026</div>
+            <div class="grade-score">95</div>
+        </div>
+
+        <div class="grade-item">
+            <div class="subject-icon blue">▥</div>
+            <div class="grade-info">
+                <h4>Statistika</h4>
+                <p>Kuis 8: Regresi Linier</p>
+            </div>
+            <div class="grade-date">22 Nov 2026</div>
+            <div class="grade-score">88</div>
+        </div>
+
+        <div class="grade-item">
+            <div class="subject-icon orange">▤</div>
+            <div class="grade-info">
+                <h4>Ekonomi Mikro</h4>
+                <p>Kuis 6: Elastisitas</p>
+            </div>
+            <div class="grade-date">20 Nov 2026</div>
+            <div class="grade-score-important">92</div>
+        </div>
+
+        <div class="grade-item">
+            <div class="subject-icon purple">Σ</div>
+            <div class="grade-info">
+                <h4>Matematika Ekonomi</h4>
+                <p>Kuis 4: Integral</p>
+            </div>
+            <div class="grade-date">18 Nov 2026</div>
+            <div class="grade-score">85</div>
+        </div>
+
+    </div>
+
+    <!-- ANNOUNCEMENT -->
+    <div class="content-card announcement">
+
+        <div class="section-heading">
+            <h2>📢 Pengumuman</h2>
+            <a href="{% url 'pengumuman' %}">Lihat Semua →</a>
+        </div>
+
+        <div class="announcement-box">
+            <h4>Selamat datang di SiRekap!</h4>
+            <p>
+                Sekarang kamu bisa memantau nilai kuis
+                secara lebih mudah melalui SiRekap.
+                Tidak perlu khawatir kehilangan catatan nilai lagi!
+            </p>
+            <small>24 November 2026</small>
+        </div>
+
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="content-card statistics">
+
+        <div class="section-heading">
+            <h2>📊 Statistik Nilai</h2>
+            <a href="{% url 'statistik' %}">Detail →</a>
+        </div>
+
+        <div class="chart-placeholder">
+            <div class="chart-bars">
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 60%"></div>
+                    <small>Kuis 1</small>
+                </div>
+
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 75%"></div>
+                    <small>Kuis 2</small>
+                </div>
+
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 85%"></div>
+                    <small>Kuis 3</small>
+                </div>
+
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 95%"></div>
+                    <small>Kuis 4</small>
+                </div>
+
+                <div class="bar-wrapper">
+                    <div class="bar" style="height: 80%"></div>
+                    <small>Kuis 5</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- UPCOMING QUIZ -->
+    <div class="content-card upcoming-quiz">
+
+        <div class="section-heading">
+            <h2>📅 Kuis Mendatang</h2>
+        </div>
+
+        <div class="empty-state">
+            <div>🗓️</div>
+            <h4>Belum ada jadwal kuis</h4>
+            <p>Informasi kuis mendatang akan muncul di sini.</p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

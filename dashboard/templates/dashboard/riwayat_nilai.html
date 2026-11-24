@@ -1,0 +1,82 @@
+
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Riwayat Nilai</h1>
+        <p>Daftar seluruh nilai kuis yang telah kamu peroleh.</p>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="section-header">
+        <h2>Semua Nilai Kuis</h2>
+        <span class="total-label">5 Data</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="grade-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Mata Kuliah</th>
+                    <th>Nama Kuis</th>
+                    <th>Tanggal</th>
+                    <th>Nilai</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 1</td>
+                    <td>10 Nov 2026</td>
+                    <td><span class="grade-score">95</span></td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Matematika</td>
+                    <td>Kuis 2</td>
+                    <td>12 Nov 2026</td>
+                    <td><span class="grade-score">85</span></td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 2</td>
+                    <td>15 Nov 2026</td>
+                    <td><span class="grade-score important">100</span></td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Statistika</td>
+                    <td>Kuis 1</td>
+                    <td>18 Nov 2026</td>
+                    <td><span class="grade-score">80</span></td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 3</td>
+                    <td>20 Nov 2026</td>
+                    <td><span class="grade-score">90</span></td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

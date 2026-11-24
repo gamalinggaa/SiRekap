@@ -1,0 +1,129 @@
+
+{% extends 'dashboard/admin_base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Admin Dashboard</h1>
+        <p>Selamat datang di panel pengelolaan SiRekap.</p>
+    </div>
+</div>
+
+<!-- SUMMARY CARDS -->
+<div class="admin-stats-grid">
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon blue">👨‍🎓</div>
+        <p>Total Mahasiswa</p>
+        <h2>120</h2>
+        <span>Mahasiswa terdaftar</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon red">📚</div>
+        <p>Total Mata Kuliah</p>
+        <h2>8</h2>
+        <span>Mata kuliah aktif</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon blue">📝</div>
+        <p>Total Kuis</p>
+        <h2>24</h2>
+        <span>Kuis terdaftar</span>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="admin-stat-icon red">📊</div>
+        <p>Nilai Terinput</p>
+        <h2>450</h2>
+        <span>Data nilai tersimpan</span>
+    </div>
+
+</div>
+
+<!-- QUICK ACTIONS -->
+<div class="content-card admin-actions">
+    <div class="section-header">
+        <h2>Menu Pengelolaan</h2>
+    </div>
+
+    <div class="admin-action-grid">
+
+        <a href="{% url 'data_mahasiswa' %}" class="admin-action-item {% if request.resolver_match.url_name == 'data_mahasiswa' %}active{% endif %}">
+            <div class="action-icon">👥</div>
+            <h3>Data Mahasiswa</h3>
+            <p>Lihat dan kelola data mahasiswa.</p>
+        </a>
+
+        <a href="{% url 'data_kuis' %}" class="admin-action-item">
+            <div class="action-icon">📝</div>
+            <h3>Data Kuis</h3>
+            <p>Kelola informasi dan daftar kuis.</p>
+        </a>
+
+        <a href="{% url 'kelola_nilai' %}" class="admin-action-item">
+            <div class="action-icon">📊</div>
+            <h3>Input Nilai</h3>
+            <p>Masukkan dan perbarui nilai kuis.</p>
+        </a>
+
+        <a href="{% url 'kelola_nilai' %}" class="admin-action-item">
+            <div class="action-icon">📢</div>
+            <h3>Pengumuman</h3>
+            <p>Kelola informasi untuk mahasiswa.</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- RECENT GRADES -->
+<div class="content-card">
+    <div class="section-header">
+        <h2>Nilai Terbaru Diinput</h2>
+        <span class="total-label">3 Data Terbaru</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="grade-table">
+            <thead>
+                <tr>
+                    <th>Mahasiswa</th>
+                    <th>Mata Kuliah</th>
+                    <th>Kuis</th>
+                    <th>Nilai</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Mahasiswa A</td>
+                    <td>DDP 1</td>
+                    <td>Kuis 3</td>
+                    <td><span class="grade-score">95</span></td>
+                    <td><span class="status-badge success">Tersimpan</span></td>
+                </tr>
+
+                <tr>
+                    <td>Mahasiswa B</td>
+                    <td>Matematika</td>
+                    <td>Kuis 2</td>
+                    <td><span class="grade-score">85</span></td>
+                    <td><span class="status-badge success">Tersimpan</span></td>
+                </tr>
+
+                <tr>
+                    <td>Mahasiswa C</td>
+                    <td>Statistika</td>
+                    <td>Kuis 1</td>
+                    <td><span class="grade-score">90</span></td>
+                    <td><span class="status-badge success">Tersimpan</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

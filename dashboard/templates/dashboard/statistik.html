@@ -1,0 +1,126 @@
+
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Statistik Nilai</h1>
+        <p>Pantau perkembangan hasil kuis kamu.</p>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <p>Rata-rata Nilai</p>
+        <h2>88.5</h2>
+        <span>Seluruh kuis</span>
+    </div>
+
+    <div class="stat-card">
+        <p>Nilai Tertinggi</p>
+        <h2>100</h2>
+        <span>DDP 1 - Kuis 2</span>
+    </div>
+
+    <div class="stat-card">
+        <p>Nilai Terendah</p>
+        <h2>80</h2>
+        <span>Statistika - Kuis 1</span>
+    </div>
+
+    <div class="stat-card">
+        <p>Total Kuis</p>
+        <h2>5</h2>
+        <span>Kuis telah dinilai</span>
+    </div>
+
+</div>
+
+<!-- GRAFIK -->
+<div class="content-card statistics-chart">
+
+    <div class="section-header">
+        <div>
+            <h2>Perkembangan Nilai</h2>
+            <p>Perubahan nilai dari kuis ke kuis</p>
+        </div>
+    </div>
+
+    <div class="chart-bars">
+
+        <div class="chart-column">
+            <div class="chart-value">95</div>
+            <div class="chart-bar" style="height: 95%;"></div>
+            <span>Kuis 1</span>
+        </div>
+
+        <div class="chart-column">
+            <div class="chart-value">85</div>
+            <div class="chart-bar" style="height: 85%;"></div>
+            <span>Kuis 2</span>
+        </div>
+
+        <div class="chart-column">
+            <div class="chart-value">100</div>
+            <div class="chart-bar" style="height: 100%;"></div>
+            <span>Kuis 3</span>
+        </div>
+
+        <div class="chart-column">
+            <div class="chart-value">80</div>
+            <div class="chart-bar" style="height: 80%;"></div>
+            <span>Kuis 4</span>
+        </div>
+
+        <div class="chart-column">
+            <div class="chart-value">90</div>
+            <div class="chart-bar" style="height: 90%;"></div>
+            <span>Kuis 5</span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- NILAI PER MATA KULIAH -->
+<div class="content-card">
+    <div class="section-header">
+        <h2>Rata-rata per Mata Kuliah</h2>
+    </div>
+
+    <div class="subject-stat">
+        <div class="subject-info">
+            <span>DDP 1</span>
+            <strong>95.0</strong>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 95%;"></div>
+        </div>
+    </div>
+
+    <div class="subject-stat">
+        <div class="subject-info">
+            <span>Matematika</span>
+            <strong>85.0</strong>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="subject-stat">
+        <div class="subject-info">
+            <span>Statistika</span>
+            <strong>80.0</strong>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 80%;"></div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

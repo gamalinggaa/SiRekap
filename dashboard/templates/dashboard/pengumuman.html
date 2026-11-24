@@ -1,0 +1,73 @@
+
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Pengumuman</h1>
+        <p>Informasi terbaru seputar kuis dan pembaruan nilai.</p>
+    </div>
+</div>
+
+<!-- RINGKASAN -->
+<div class="announcement-summary">
+    <div class="summary-icon">📢</div>
+    <div>
+        <h3>Informasi Terbaru</h3>
+        <p>Jangan lewatkan informasi penting dari dosen dan admin SiRekap.</p>
+    </div>
+</div>
+
+<!-- DAFTAR PENGUMUMAN -->
+<div class="announcement-list">
+
+    <div class="announcement-card">
+        <div class="announcement-top">
+            <span class="announcement-category update">Pembaruan Nilai</span>
+            <span class="announcement-date">24 November 2026</span>
+        </div>
+
+        <h3>Nilai DDP 1 Kuis 3 Telah Diperbarui</h3>
+
+        <p>
+            Nilai DDP 1 untuk Kuis 3 sudah tersedia.
+            Silakan buka halaman Riwayat Nilai untuk melihat hasil kuis kamu.
+        </p>
+
+        <a href="{% url 'riwayat_nilai' %}" class="announcement-link">
+            Lihat Riwayat Nilai →
+        </a>
+    </div>
+
+    <div class="announcement-card">
+        <div class="announcement-top">
+            <span class="announcement-category schedule">Informasi Kuis</span>
+            <span class="announcement-date">22 November 2026</span>
+        </div>
+
+        <h3>Informasi Pelaksanaan Kuis Matematika</h3>
+
+        <p>
+            Mahasiswa diharapkan memperhatikan jadwal pelaksanaan
+            kuis Matematika sesuai informasi dari dosen pengampu.
+        </p>
+    </div>
+
+    <div class="announcement-card">
+        <div class="announcement-top">
+            <span class="announcement-category general">Informasi Umum</span>
+            <span class="announcement-date">20 November 2026</span>
+        </div>
+
+        <h3>Selamat Datang di SiRekap!</h3>
+
+        <p>
+            SiRekap hadir untuk membantu mahasiswa memantau
+            perkembangan nilai kuis secara lebih mudah dan terorganisir.
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,139 @@
+
+{% extends 'dashboard/admin_base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Data Kuis</h1>
+        <p>Kelola dan pantau daftar kuis dari setiap mata kuliah.</p>
+    </div>
+</div>
+
+<!-- RINGKASAN DATA KUIS -->
+<div class="admin-stats-grid">
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Total Kuis</p>
+            <h2>24</h2>
+            <span>Seluruh kuis terdaftar</span>
+        </div>
+        <div class="stat-icon blue">📝</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Kuis Mendatang</p>
+            <h2>5</h2>
+            <span>Belum dilaksanakan</span>
+        </div>
+        <div class="stat-icon orange">📅</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Sudah Diinput</p>
+            <h2>15</h2>
+            <span>Nilai telah tersedia</span>
+        </div>
+        <div class="stat-icon green">✓</div>
+    </div>
+
+    <div class="admin-stat-card">
+        <div class="stat-info">
+            <p>Menunggu Nilai</p>
+            <h2>4</h2>
+            <span>Belum selesai diinput</span>
+        </div>
+        <div class="stat-icon red">⏳</div>
+    </div>
+
+</div>
+
+<!-- TABEL DATA KUIS -->
+<div class="content-card">
+
+    <div class="section-header">
+        <div>
+            <h2>Daftar Kuis</h2>
+            <p>Informasi kuis yang terdaftar dalam sistem.</p>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="grade-table">
+
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Kuis</th>
+                    <th>Mata Kuliah</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah Peserta</th>
+                    <th>Status Nilai</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kuis 1 - Dasar Python</td>
+                    <td>DDP 1</td>
+                    <td>10 Nov 2026</td>
+                    <td>40</td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Kuis 2 - Percabangan</td>
+                    <td>DDP 1</td>
+                    <td>17 Nov 2026</td>
+                    <td>40</td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Kuis 3 - Perulangan</td>
+                    <td>DDP 1</td>
+                    <td>25 Nov 2026</td>
+                    <td>40</td>
+                    <td><span class="status-badge pending">Menunggu</span></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Kuis 1 - Matriks</td>
+                    <td>Matematika</td>
+                    <td>12 Nov 2026</td>
+                    <td>38</td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Kuis 2 - Determinan</td>
+                    <td>Matematika</td>
+                    <td>26 Nov 2026</td>
+                    <td>38</td>
+                    <td><span class="status-badge pending">Menunggu</span></td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Kuis 1 - Statistika Dasar</td>
+                    <td>Statistika</td>
+                    <td>20 Nov 2026</td>
+                    <td>35</td>
+                    <td><span class="status-badge success">Selesai</span></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}
